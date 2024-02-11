@@ -1,0 +1,1 @@
+cd "C:\Users\Yogesh Computers\AppData\Local\Programs\Python\Python310\Movie Recommender System and Sentiment Analysis"
