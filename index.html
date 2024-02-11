@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title style="font-family: Verdana, Geneva, Tahoma, sans-serif;">MOVIE_Mania</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        .text-black {
+            color: #ed3939
+        }
+
+        .navbar {
+            background-color: #ed3939;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .navbar-nav a {
+            color: #fff;
+            font-size: 20px;
+        }
+        
+        .navbar-brand {
+            color: #fff;
+            font-size: 24px;
+        }
+
+        .movie-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-top: 20px;
+        }
+
+        .movie {
+            text-align: center;
+            padding: 10px;
+            width: 20%;
+            box-sizing: border-box;
+        }
+
+        .movie img {
+            width: 100%;
+            height: auto;
+        }
+
+        .movie-title {
+            margin-top: 10px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a class="navbar-brand">Movie Mania</a>
+        <ul class="nav navbar-nav">
+            <li><a href="/" style="color: white; font-size: 20px;">Home</a></li>
+            <li><a href="/recommend" style="color: white; font-size: 20px;">Recommend</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-black" style="font-size: 50px">Popular Movies</h1>
+            </div>
+        </div>
+
+        <div class="row movie-container">
+            {% for movie in movies %}
+            <div class="col-md-2 movie">
+                <img src="{{ movie.poster_url }}" alt="{{ movie.title }} poster">
+                <div class="movie-title">{{ movie.title }}</div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+</body>
+
+</html>
