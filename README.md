@@ -1,2 +1,1 @@
-# movie-recommender
-movie recommendation with sentiment analysis 
+# movie recommendation with sentiment analysis  
